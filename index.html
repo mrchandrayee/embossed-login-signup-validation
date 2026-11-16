@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <title>Embossed Login / Sign Up with Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Embossed Login /<br> Sign Up with Validation</h1>
+
+    <section class="auth-shell" id="authShell" aria-label="Login and sign up">
+      <aside class="welcome-panel" id="welcomePanel">
+        <div class="welcome-content welcome-signup">
+          <span class="welcome-tag">Welcome Back</span>
+          <h2>Hello, Friend!</h2>
+          <p>Enter your details and start your embossed UI journey with our modern sign up experience.</p>
+          <button class="soft-button" type="button" data-switch="login">Sign In</button>
+        </div>
+        <div class="welcome-content welcome-login">
+          <span class="welcome-tag">New Here?</span>
+          <h2>Welcome!</h2>
+          <p>Create an account and join us to experience a clean, modern interface.</p>
+          <button class="soft-button" type="button" data-switch="signup">Create Account</button>
+        </div>
+      </aside>
+
+      <div class="form-side">
+        <form class="auth-form signup-form" id="signupForm" novalidate>
+          <h2>Create Account</h2>
+          <p class="form-subtitle">Sign up and begin your experience</p>
+
+          <div class="alert-box" id="signupAlert" role="alert" aria-live="polite" hidden>
+            <span class="alert-icon">!</span>
+            <span><strong>Sign Up Failed</strong><br><span id="signupAlertText">Please fill all fields correctly, match passwords, and accept the terms &amp; conditions.</span></span>
+          </div>
+
+          <div class="name-row">
+            <div class="field">
+              <input class="input" id="firstName" name="firstName" type="text" placeholder="First name" autocomplete="given-name">
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <input class="input" id="lastName" name="lastName" type="text" placeholder="Last name" autocomplete="family-name">
+              <small class="error"></small>
+            </div>
+          </div>
+          <div class="field">
+            <input class="input" id="signupEmail" name="email" type="email" placeholder="Email address" autocomplete="email">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <input class="input" id="signupPassword" name="password" type="password" placeholder="Create password" autocomplete="new-password">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <input class="input" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" autocomplete="new-password">
+            <small class="error"></small>
+          </div>
+
+          <label class="terms-row">
+            <input id="terms" type="checkbox">
+            <span>I agree to the terms &amp; conditions</span>
+          </label>
+          <small class="terms-error" id="termsError"></small>
+
+          <button class="submit-btn" type="submit">Create Account</button>
+          <div class="or-divider"><span>or sign up with</span></div>
+          <div class="social-row" aria-label="Social sign up options">
+            <button type="button" class="social-btn" aria-label="Continue with Google">G</button>
+            <button type="button" class="social-btn" aria-label="Continue with Facebook">f</button>
+            <button type="button" class="social-btn" aria-label="Continue with LinkedIn">in</button>
+          </div>
+          <p class="mobile-switch">Already have an account? <button type="button" data-switch="login">Sign in</button></p>
+        </form>
+
+        <form class="auth-form login-form" id="loginForm" novalidate>
+          <h2>Sign In</h2>
+          <p class="form-subtitle">Welcome back! Please login to your account.</p>
+
+          <div class="alert-box" id="loginAlert" role="alert" aria-live="polite" hidden>
+            <span class="alert-icon">!</span>
+            <span><strong>Login Failed</strong><br><span id="loginAlertText">Please enter a valid email address and password.</span></span>
+          </div>
+
+          <div class="field">
+            <input type="email" class="input" id="loginEmail" name="email" placeholder="Email address" autocomplete="email">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <input type="password" class="input" id="loginPassword" name="password" placeholder="Password" autocomplete="current-password">
+            <small class="error"></small>
+          </div>
+          <div class="options">
+            <label class="remember"><input type="checkbox" id="rememberMe"><span>Remember me</span></label>
+            <a href="#" id="forgotLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="submit-btn">Login Now</button>
+          <div class="or-divider"><span>or sign in with</span></div>
+          <div class="social-row" aria-label="Social sign in options">
+            <button type="button" class="social-btn" aria-label="Continue with Google">G</button>
+            <button type="button" class="social-btn" aria-label="Continue with Facebook">f</button>
+            <button type="button" class="social-btn" aria-label="Continue with LinkedIn">in</button>
+          </div>
+          <p class="mobile-switch">Don't have an account? <button type="button" data-switch="signup">Create account</button></p>
+        </form>
+      </div>
+    </section>
+    <p class="caption">Comment "Login" for code</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
